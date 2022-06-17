@@ -1,0 +1,41 @@
+@startuml
+
+rectangle autoware {
+  usecase "/awapi/awapi_awiv_adapter_node"
+}
+usecase "v2i_interface" #LightCoral
+rectangle user-defined {
+  node "broadcasting device"
+  node "v2i controller[0]" as v2ictl_0
+  node "v2i controller[1]" as v2ictl_1
+  node "v2i controller[n]" as v2ictl_n
+  node "v2i infrastructure[0]" as v2ihw_0
+  node "v2i infrastructure[1]" as v2ihw_1
+  node "v2i infrastructure[n]" as v2ihw_n
+}
+
+(/awapi/awapi_awiv_adapter_node) --> (v2i_interface) : /awapi/tmp/infrastructure_commands
+(/awapi/awapi_awiv_adapter_node) <-- (v2i_interface) : /system/v2x/virtual_traffic_light_states
+(v2i_interface) --> (broadcasting device) : v2i command (UDP)
+(v2i_interface) <-- (broadcasting device) : v2i status (UDP)
+(broadcasting device) --> (v2ictl_0)
+(broadcasting device) <-- (v2ictl_0)
+(broadcasting device) --> (v2ictl_1)
+(broadcasting device) <-- (v2ictl_1)
+(broadcasting device) --> (v2ictl_n)
+(broadcasting device) <-- (v2ictl_n) : wireless communication
+
+(v2ictl_0) -[hidden] (v2ictl_1)
+(v2ictl_1) -[hidden] (v2ictl_n)
+
+(v2ictl_0) --> (v2ihw_0)
+(v2ictl_0) <-- (v2ihw_0)
+(v2ictl_1) --> (v2ihw_1)
+(v2ictl_1) <-- (v2ihw_1)
+(v2ictl_n) --> (v2ihw_n)
+(v2ictl_n) <-- (v2ihw_n) : GPIO communication
+
+note right of "broadcasting device" : In vehicle system
+note right of v2ictl_n : In the environment
+
+@enduml
