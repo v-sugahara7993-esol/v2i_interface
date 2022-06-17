@@ -16,10 +16,11 @@
 
 <launch>
   <arg name="operation_mode" default="product" description="product, local_test"/>
-  <arg name="input/command_array" default="/awapi/tmp/infrastructure_commands"/>
-  <arg name="output/state_array" default="/system/v2x/virtual_traffic_light_states"/>
 
   <let name="config_dir" value="$(find-pkg-share v2i_interface_params)/config" />
+
+  <let name="input/command_array" value="/awapi/tmp/infrastructure_commands"/>
+  <let name="output/state_array" value="/system/v2x/virtual_traffic_light_states"/>
 
   <group>
     <push-ros-namespace namespace="v2i_interface"/>
