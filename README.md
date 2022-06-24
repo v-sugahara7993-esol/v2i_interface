@@ -40,7 +40,7 @@ These are mandatory parameters of UDP connection to a user-defined broadcasting 
 If you want to use different set of paremeters, fork the [v2i_interface_params.default](https://github.com/eve-autonomy/v2i_interface_params.default) repository.
 
 ## UDP protocol
-The broadcasting device must meet the following communication specifications.
+Broadcasting device must meet the following specifications.
 
 ### v2i command
 
