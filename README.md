@@ -42,7 +42,7 @@ If you want to use different set of paremeters, fork the [v2i_interface_params.d
 ## UDP protocol
 Broadcasting device must meet the following specifications.
 
-### v2i command
+### V2I command: infrastructure_commands
 
 ```
 {
