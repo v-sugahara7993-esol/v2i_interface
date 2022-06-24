@@ -14,7 +14,7 @@ It is necessary to prepare a user-defined broadcasting device, which connects to
   - from [user-defined broadcasting device](#v2i-status)
     - `v2i status` (UDP) : The state of the V2I infrastructure. It has an array structure to control the vehicle based on the state of multiple infrastructures.
 - output
-  - to [autoware.universe](https://github.com/autowarefoundation/autoware.universe)
+  - to [autoware.universe](https://github.com/autowarefoundation/autoware.universe/)
     - `/system/v2x/virtual_traffic_light_status` : A conversion of `v2i_status` (UDP) for the ROS2 protocol.
   - to [user-defined broadcasting device](#v2i-command)
     - `v2i command` (UDP) : A conversion of `/awapi/tmp/infrastructure_commands` for the UDP protocol.
