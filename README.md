@@ -36,7 +36,6 @@ These are mandatory parameters of UDP connection to a user-defined broadcasting 
 |send_port     |
 |receive_port  |
 
-The specific values for these parameters are defined in the v2i_interface_params package.
 
 If you want to use different value, fork the [v2i_interface_params.default](https://github.com/eve-autonomy/v2i_interface_params.default) repository, create a new repository.
 
