@@ -36,6 +36,6 @@ rectangle user-defined {
 (v2ictl_n) <-- (v2ihw_n) : GPIO communication
 
 note right of "broadcasting device" : In vehicle
-note right of v2ictl_n : In the environment
+note right of v2ictl_n : On infrastructure ( off-vehicle )
 
 @enduml
