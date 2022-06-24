@@ -12,7 +12,7 @@ It is necessary to prepare a user-defined broadcasting device, which connects to
   - from [autoware.universe](https://github.com/autowarefoundation/autoware.universe/)
     - `/awapi/tmp/infrastructure_commands` : Control command to V2I infrastructure. It has an array structure to control multiple infrastructures at the same time.
   - from [user-defined broadcasting device](#v2i-status)
-    - `v2i status` (UDP) : The state of the V2I infrastructure. It has an array structure to control the vehicle based on the state of multiple infrastructures.
+    - `v2i status` (UDP) : State from V2I infrastructure. It has an array structure to control the vehicle based on the state of multiple infrastructures.
 - output
   - to [autoware.universe](https://github.com/autowarefoundation/autoware.universe/)
     - `/system/v2x/virtual_traffic_light_status` : A conversion of `v2i_status` (UDP) for the ROS2 protocol.
