@@ -1,7 +1,7 @@
 # Vehicle to infrastructure (V2I) interface
 
 ## Overview
-This node supports intercommunication with user-defined V2I infrastructure.
+This node converts V2I communication between the Autoware of ROS2 interface and UDP which is outside of ROS2 interface.
 
 This forms UDP communication with a single external device and translates ROS messages into a ROS-independent format.
 
