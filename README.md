@@ -63,7 +63,7 @@ Broadcasting device must meet the following specifications.
 
 <details><summary>Item description</summary><div>
 
-#### Top level items of v2i command
+#### High level description
 
 |Name       |Description|
 |:----------|:----------|
