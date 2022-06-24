@@ -80,7 +80,7 @@ Broadcasting device must meet the following specifications.
 
 </div></details>
 
-### v2i status
+### V2I status: virtual_traffic_light_states
 
 ```
 {
