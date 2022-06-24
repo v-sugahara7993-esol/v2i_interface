@@ -17,7 +17,7 @@ It is necessary to prepare a user-defined broadcasting device, which connects to
   - to [autoware.universe](https://github.com/autowarefoundation/autoware.universe/)
     - `/system/v2x/virtual_traffic_light_status` : ROS2 interface from `v2i_status` (UDP).
   - to [user-defined broadcasting device](#v2i-command)
-    - `v2i command` (UDP) : A conversion of `/awapi/tmp/infrastructure_commands` for the UDP protocol.
+    - `v2i command` (UDP) : UDP protocol from `/awapi/tmp/infrastructure_commands`.
 
 ## Node Graph
 ![node graph](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/eve-autonomy/v2i_interface/docs/node_graph.pu)
