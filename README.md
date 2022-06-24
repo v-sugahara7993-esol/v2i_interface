@@ -5,7 +5,7 @@ This node converts V2I communication between the Autoware of ROS2 interface and 
 
 This converter acts with a single external device on a vehicle.
 
-It is necessary to prepare a user-defined broadcasting device in order to realize connection with an unspecified number of infrastructure devices.
+It is necessary to prepare a user-defined broadcasting device, which connects to number of infrastructure devices.
 
 ## Input and Output
 - input
