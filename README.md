@@ -3,7 +3,7 @@
 ## Overview
 This node converts V2I communication between the Autoware of ROS2 interface and UDP which is outside of ROS2 interface.
 
-This forms UDP communication with a single external device and translates ROS messages into a ROS-independent format.
+This converter acts with a single external device on a vehicle.
 
 It is necessary to prepare a user-defined broadcasting device in order to realize connection with an unspecified number of infrastructure devices.
 
