@@ -121,7 +121,7 @@ Broadcasting device must meet the following specifications.
 
 <details><summary>Item description</summary><div>
 
-#### Top level items of v2i status
+#### High level description
 This is mainly about the status of broadcasting device.
 
 |Name       |Description|
