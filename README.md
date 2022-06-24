@@ -26,7 +26,7 @@ It is necessary to prepare a user-defined broadcasting device, which connects to
 
 |Name          |Descriptoin|
 |:-------------|:----------|
-|operation_mode|Select the following operation modes; `product`, `local_test`. This replaces the entire list of parameters with different values.|
+|operation_mode|Select the following operation modes; `product`, `local_test`. This value changes parameter directories.|
 
 ## Parameter description
 These are mandatory parameters of UDP connection to a user-defined broadcasting device.
