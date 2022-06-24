@@ -1,4 +1,4 @@
-# v2i_interface
+# Vehicle to infrastructure (V2I) interface
 
 ## Overview
 This node supports intercommunication with user-defined V2I infrastructure.
