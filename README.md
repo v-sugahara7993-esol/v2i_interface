@@ -20,7 +20,7 @@ It is necessary to prepare a user-defined broadcasting device, which connects to
     - `v2i command` (UDP) : UDP protocol from `/awapi/tmp/infrastructure_commands`.
 
 ## Node Graph
-![node graph](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/eve-autonomy/v2i_interface/main/docs/node_graph.pu)
+![node graph](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eve-autonomy/v2i_interface/main/docs/node_graph.pu)
 
 ## Launch arguments
 
