@@ -3,6 +3,7 @@
 rectangle autoware {
   usecase "/awapi/awapi_awiv_adapter_node"
 }
+usecase "autoware_state_machine"
 usecase "v2i_interface" #LightCoral
 rectangle user-defined {
   node "broadcasting device"
@@ -16,6 +17,7 @@ rectangle user-defined {
 
 (/awapi/awapi_awiv_adapter_node) --> (v2i_interface) : /awapi/tmp/infrastructure_commands
 (/awapi/awapi_awiv_adapter_node) <-- (v2i_interface) : /system/v2x/virtual_traffic_light_states
+(autoware_state_machine) --> (v2i_interface) : /autoware_state_machine/state
 (v2i_interface) --> (broadcasting device) : v2i command (UDP)
 (v2i_interface) <-- (broadcasting device) : v2i status (UDP)
 (broadcasting device) --> (v2ictl_0)
