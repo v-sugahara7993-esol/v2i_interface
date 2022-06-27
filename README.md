@@ -10,14 +10,16 @@ It is necessary to prepare a user-defined broadcasting device, which connects to
 ## Input and Output
 - input
   - from [autoware.universe](https://github.com/autowarefoundation/autoware.universe/)
-    - `/awapi/tmp/infrastructure_commands` : Control command to V2I infrastructure. It has an array structure to control multiple infrastructures at the same time.
-  - from [user-defined broadcasting device](#v2i-status)
-    - `v2i status` (UDP) : State from V2I infrastructure. It has an array structure to control the vehicle based on the state of multiple infrastructures.
+    - `/awapi/tmp/infrastructure_commands` \[[tier4_v2x_msgs/msg/InfrastructureCommandArray](https://github.com/tier4/tier4_autoware_msgs/blob/tier4/universe/tier4_v2x_msgs/msg/InfrastructureCommandArray.msg)\]:<br>Control command to V2I infrastructure. It has an array structure to control multiple infrastructures at the same time.
+  - from [autoware_state_machine](https://github.com/eve-autonomy/autoware_state_machine/)
+    - `/autoware_state_machine/state` \[[autoware_state_machine_msgs/msg/StateMachine](https://github.com/eve-autonomy/autoware_state_machine_msgs/blob/main/msg/StateMachine.msg)\]:<br>State of the system.
+  - from user-defined broadcasting device
+    - `v2i status` ([UDP](#v2i-status)) :<br>State from V2I infrastructure. It has an array structure to control the vehicle based on the state of multiple infrastructures.
 - output
   - to [autoware.universe](https://github.com/autowarefoundation/autoware.universe/)
-    - `/system/v2x/virtual_traffic_light_status` : ROS2 interface from `v2i_status` (UDP).
-  - to [user-defined broadcasting device](#v2i-command)
-    - `v2i command` (UDP) : UDP protocol from `/awapi/tmp/infrastructure_commands`.
+    - `/system/v2x/virtual_traffic_light_status` \[[tier4_v2x_msgs/msg/VirtualTrafficLightStateArray](https://github.com/tier4/tier4_autoware_msgs/blob/tier4/universe/tier4_v2x_msgs/msg/VirtualTrafficLightStateArray.msg)\]:<br>ROS2 interface from `v2i_status` (UDP).
+  - to user-defined broadcasting device
+    - `v2i command` ([UDP](#v2i-command)) :<br>UDP protocol from `/awapi/tmp/infrastructure_commands`.
 
 ## Node Graph
 ![node graph](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eve-autonomy/v2i_interface/main/docs/node_graph.pu)
