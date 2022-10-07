@@ -161,3 +161,16 @@ This is the sender status of the most recently sent V2I infrastructure control c
 
 </div></details>
 
+## Vector map configuration
+Add every optional tags below to virtual traffic light object.
+
+| Name | Range | Description |
+|--|--|--|
+| type | eva_beacon_system | Fixed value（To identify from other VirtualTrafficLight objects.） |
+| eva_beacon_system:id | 1-254 | ID which set to the equipment side beacon device. |  |
+| eva_beacon_system:ref:section | REQUESTING | Selects a section that enables V2I control.<br>- REQUESTING: start_line to ref_line<br>- (Empty): start_line to end_line |
+| eva_beacon_system:ref:permit_state | DRIVING | Selects vehicle states which enables V2I control.<br>- DRIVING: During driving<br>- (Empty): Do not care the vehicle states<br>* This can't specify the behivior before a route supplied. |
+| eva_beacon_system:ref:request_bit | 0x0-0x0f | Value to be output by GPIO when the V2I control enabled. |
+| eva_beacon_system:ref:expect_bit | 0x0-0x0f | Expected value which use with stop control specified by response_type. |
+| eva_beacon_system:ref:response_type | ALWAYS<br>AND<br>MATCH | Specifies how the beacon system allow the vehicle to pass. <br>- ALWAYS: Always allows without calculation of value_bit and expect_bit.<br>- AND: Allows when `expect_bit & value_bit ≠0`<br>- MATCH: Allows when `expect_bit = value_bit` |
+| eva_beacon_system:ref:mode | FIXED_VALUE<br>TURN_DIRECTION | - FIXED_VALUE<br>Use request_bit and expect_bit as specified.<br>- TURN_DIRECTION<br>Calculate request_bit and expect_bit based on turn_direction value of VirtualTrafficLight lanelet object.<br>※bit0: Straight, bit1: Turn right, bit2: Turn left |
