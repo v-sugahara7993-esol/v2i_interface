@@ -30,11 +30,11 @@ VtlCommandConverterNode::VtlCommandConverterNode(
   subscriber_option.callback_group = group;
 
   // Subscription
-  command_sub_ = create_subscription<MainInputCommandArr::ConstSharedPtr>(
+  command_sub_ = create_subscription<MainInputCommandArr>(
     "/awapi/tmp/infrastructure_commands", 1,
     std::bind(&VtlCommandConverterNode::onCommand, this, _1),
     subscriber_option);
-  state_sub_ = create_subscription<SubInputState::ConstSharedPtr>(
+  state_sub_ = create_subscription<SubInputState>(
     "/autoware_state_machine/state", 1,
     std::bind(&VtlCommandConverterNode::onState, this, _1),
     subscriber_option);
