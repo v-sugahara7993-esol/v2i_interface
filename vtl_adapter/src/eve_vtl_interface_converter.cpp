@@ -94,10 +94,10 @@ bool EveVTLInterfaceConverter::init(const std::vector<tier4_v2x_msgs::msg::KeyVa
   if (tags.find(aw_lanelet_spec::KEY_TURN_DIRECTION) != tags.end()) {
     attr->setTurnDirection(tags.at(aw_lanelet_spec::KEY_TURN_DIRECTION));
   }
-  if (tags.find(eve_vtl_spec::KEY_MODE) == tags.end()) {
+  if (tags.find(eve_vtl_spec::KEY_MODE) != tags.end()) {
     attr->setMode(tags.at(eve_vtl_spec::KEY_MODE));
   }
-  if (tags.find(eve_vtl_spec::KEY_ID) == tags.end()) {
+  if (tags.find(eve_vtl_spec::KEY_ID) != tags.end()) {
     attr->setID(tags.at(eve_vtl_spec::KEY_ID));
   }
   if (tags.find(eve_vtl_spec::KEY_RESPONSE_TYPE) != tags.end()) {
